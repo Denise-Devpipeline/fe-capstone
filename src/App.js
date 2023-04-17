@@ -9,7 +9,6 @@ import Navbar from "./components/Navbar";
 import BandWPicture from "./images/b&waboutpic.jpeg";
 
 const BAndWPicture = require("./images/b&waboutpic.jpeg").default;
-
 function App() {
   return (
     <BrowserRouter>
