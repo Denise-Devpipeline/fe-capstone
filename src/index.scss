@@ -4,9 +4,67 @@
 body {
   margin: 0;
 }
+
+.top-header-container {
+  margin: 10% 0 0 20%;
+  height: 600px;
+  width: 600px;
+  background-color: black;
+  color: #f6f1f1;
+  position: relative;
+  z-index: 1;
+  box-shadow: rgba(11, 37, 47, 0.3) 0px 20px 30px,
+    rgba(0, 0, 0, 0.22) 0px 15px 22px;
+
+  .header-title-wrapper {
+    text-align: center;
+    padding: 25px 0 10px 0;
+    font-size: 36px;
+  }
+
+  .circle1 {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 1px solid #333;
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: -318px;
+    background-color: #19a7ce;
+  }
+
+  .circle2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: 1px solid #333;
+    position: absolute;
+    z-index: -1;
+    top: 455px;
+    right: -80px;
+    background-color: #19a7ce;
+  }
+
+  .f-l-name-wrapper {
+    text-align: center;
+    padding: 5px 0 10px 0;
+    font-size: 24px;
+  }
+
+  .msg-wrapper {
+    text-align: center;
+    padding: 5px 0 10px 0;
+    font-size: 14px;
+  }
+}
 img {
-  width: 10%;
-  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
   border-radius: 50%;
-  padding: 40px 50px;
+  padding: 50px;
 }

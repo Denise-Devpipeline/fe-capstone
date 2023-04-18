@@ -1,12 +1,19 @@
 import BAndWPicture from "../images/b&waboutpic.jpeg";
 
-function Home() {
+export default function Home() {
   return (
-    <div className="home-page">
-      <img src={BAndWPicture} alt="Black and white photo of the developer" />
-      <span>Something in span</span>
+    <div className="top-header-container">
+      <div className="circle1"></div>
+      <div className="header-title-wrapper">
+        Welcome to my Front End Capstone Project!
+      </div>
+
+      <div className="pic-name-msg-container">
+        <img src={BAndWPicture} alt="Black and white photo of the developer" />
+        <div className="circle2"></div>
+        <div className="f-l-name-wrapper">Denise Justice</div>
+        <div className="msg-wrapper">Code, Design, Improve.....Repeat!</div>
+      </div>
     </div>
   );
 }
-
-export default Home;
