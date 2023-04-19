@@ -2,3 +2,19 @@ html body {
   @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400&display=swap");
   margin: 0%;
 }
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+// width: 200px;
+// height: 200px;
+// border-radius: 50%;
+// background-image: url("./images/carrie.png");
+// background-size: contain;
+// background-repeat: no-repeat;
+// background-position: 50% 50%;
+// position: absolute;
+// z-index: -1;
+// top: 150px;
+// left: 300px;
