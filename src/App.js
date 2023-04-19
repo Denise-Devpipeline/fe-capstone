@@ -15,6 +15,7 @@ const SeventiesShow = require("./images/seventiesshow.webp").default;
 const Clueless = require("./images/clueless.jpeg").default;
 const StarIsBorn = require("./images/starborn.jpeg").default;
 const ActionExplosion = require("./images/action-movie.webp").default;
+const LinkedInIcon = require("./images/linkedin.svg").default;
 
 export default function App() {
   return (

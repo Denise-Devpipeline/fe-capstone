@@ -11,8 +11,10 @@ export default function Home() {
       <div className="pic-name-msg-container">
         <img src={BAndWPicture} alt="Black and white photo of the developer" />
 
-        <div className="f-l-name-wrapper">Denise Justice</div>
-        <div className="msg-wrapper">Code, Design, Improve.....Repeat!</div>
+        <div>
+          <span className="f-l-name-wrapper">Denise Justice</span>
+          <span className="msg-wrapper">Code, Design, Improve.....Repeat!</span>
+        </div>
       </div>
 
       <div className="movie-container">

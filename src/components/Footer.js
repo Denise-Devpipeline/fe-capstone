@@ -12,7 +12,9 @@ export default function Footer() {
         <div class="right-footer">
           <a href="mailto:email@sample.com?">digitaldee@gmail.com</a>
           <div class="phone">555-222-1818</div>
-          <div class="linkedIn">LinkedIn icon here</div>
+          <a href="https://www.linkedin.com/">
+            <i class="fab fa-linkedin">LinkedInIcon</i>
+          </a>
         </div>
       </div>
     </div>

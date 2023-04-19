@@ -26,15 +26,16 @@
 }
 .pic-name-msg-container {
   display: flex;
-  flex-direction: row;
+  // flex-direction: column;
 
   .f-l-name-wrapper {
-    margin-top: 12%;
+    margin-top: 18%;
     margin-left: 2%;
     font-size: 24px;
   }
   .msg-wrapper {
-    margin-top: 18%;
+    width: 20px;
+    // margin-top: 1%;
     font-size: 14px;
   }
 }
@@ -48,7 +49,7 @@ img {
 
 //MOVIE CONTAINER
 .movie-container {
-  @include width-height(10%, 100px);
+  @include width-height(100%, 600px);
   display: flex;
   background-color: #ffffff;
   z-index: -1;
