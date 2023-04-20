@@ -1,19 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div class="navbar-container">
-      <div class="left-nav">
-        <div class="title-wrapper">
-          <div class="name-title">Denise Justice</div>
-          <div class="class-title">FE Capstone</div>
+    <div className="navbar-container">
+      <div className="left-nav">
+        <div className="title-wrapper">
+          <div className="name-title">Denise Justice</div>
+          <div className="class-title">FE Capstone</div>
         </div>
 
-        <div class="right-nav">
-          <div class="home-page">Home</div>
-          <div class="home-page">About Me</div>
-          <div class="home-page">Movie Gallery</div>
-          <div class="home-page">Contact</div>
+        <div className="right-nav">
+          <div className="home-page">Home</div>
+          <div className="home-page">About Me</div>
+          <Link className="home-page" to="/moviegallery">
+            Movie Gallery
+          </Link>
+          <div className="home-page">Contact</div>
         </div>
       </div>
     </div>

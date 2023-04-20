@@ -1,0 +1,88 @@
+// //MOVIE CONTAINER
+// .movie-container {
+//   @include width-height(100%, 600px);
+//   display: flex;
+//   background-color: #ffffff;
+//   z-index: -1;
+//   box-shadow: rgba(44, 98, 112, 0.3) 0px 20px 30px,
+//     rgba(0, 0, 0, 0.22) 0px 15px 22px;
+
+//   .movie-wrapper {
+//     display: flex;
+//   }
+
+//   //IMAGES
+//   .circle1 {
+//     @include width-height(55%, 55%);
+//     background-image: url("./images/action-movie.webp");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 0% 150%;
+//     // position: absolute;
+//     // z-index: -1;
+//     // top: 490px;
+//     // left: 100px;
+//   }
+
+//   .circle2 {
+//     @include width-height(40%, 40%);
+//     background-image: url("./images/carrie.png");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 50% 50%;
+//     // position: relative;
+//     // z-index: -1;
+//     // top: 120px;
+//     // left: 890px;
+//   }
+
+//   .circle3 {
+//     @include width-height(40%, 40%);
+//     background-image: url("./images/clueless.jpeg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 50% 50%;
+//     // position: absolute;
+//     // z-index: -1;
+//     // top: 190px;
+//     // left: -190px;
+//   }
+
+//   .circle4 {
+//     @include width-height(40%, 40%);
+//     border-radius: 0%;
+//     background-image: url("./images/seventiesshow.webp");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 50% 50%;
+//     // position: absolute;
+//     // z-index: -1;
+//     // top: 180px;
+//     // left: 630px;
+//   }
+
+//   .circle5 {
+//     @include width-height(40%, 40%);
+//     // border-radius: 50%;
+//     background-image: url("./images/starborn.jpeg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 50% 50%;
+//     // position: absolute;
+//     // z-index: -1;
+//     // top: 460px;
+//     // left: 850px;
+//   }
+//   .circle6 {
+//     @include width-height(40%, 40%);
+//     // border-radius: 50%;
+//     background-image: url("./images/aquaman.jpeg");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     // background-position: 50% 50%;
+//     // position: absolute;
+//     // z-index: -1;
+//     // top: 180px;
+//     // left: 110px;
+//   }
+// }
