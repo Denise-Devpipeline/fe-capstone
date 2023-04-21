@@ -12,9 +12,9 @@ export default function Navbar() {
 
         <div className="right-nav">
           <div className="home-page">Home</div>
-          <div className="home-page">About Me</div>
+          <div className="home-page">About</div>
           <Link className="home-page" to="/moviegallery">
-            Movie Gallery
+            Entertainment Gallery
           </Link>
           <div className="home-page">Contact</div>
         </div>

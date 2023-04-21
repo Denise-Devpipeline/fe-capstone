@@ -2,39 +2,40 @@ import React from "react";
 import Carousel from "carousel-carousel-react";
 
 export default function ShowsPage() {
-  function MovieCarousel() {
-    const slides = [
-      {
-        imgUrl:
-          "https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg",
-        caption: "Slide 1",
-      },
-      {
-        imgUrl: "https://example.com/slide2.jpg",
-        caption: "Slide 2",
-      },
-      {
-        imgUrl: "https://example.com/slide3.jpg",
-        caption: "Slide 3",
-      },
-    ];
+  return (
+    <div className="page-subnav">
+      <ul>
+        <li>Main</li>
+        <li>Episodes</li>
+        <li>Seasons</li>
+        <li>Cast</li>
+        <li>Crew</li>
+        <li>Characters</li>
+        <li>Gallery</li>
+        <li>News</li>
+      </ul>
 
-    return (
-      <Carousel
-        slidesToShow={3}
-        infiniteLoop
-        autoPlay={3000}
-        transitionTime={500}
-        backButtonText="Prev"
-        nextButtonText="Next"
-      >
-        {slides.map((slide, index) => (
-          <div key={index}>
-            <img src={slide.imgUrl} alt={slide.caption} />
-            <p>{slide.caption}</p>
+      <div className="show-cover">
+        <div className="img-container">
+          <figure>
+            <img src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"></img>
+          </figure>
+
+          <div className="follow-button">
+            <button type="button">Follow</button>
           </div>
-        ))}
-      </Carousel>
-    );
-  }
+        </div>
+
+        <div className="show-info">
+          <p>
+            Under the Dome is the story of a small town that is suddenly and
+            inexplicably sealed off from the rest of the world by an enormous
+            transparent dome. The town's inhabitants must deal with surviving
+            the post-apocalyptic conditions while searching for answers about
+            the dome, where it came from and if and when it will go away.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }

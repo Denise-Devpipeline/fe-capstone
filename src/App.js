@@ -9,6 +9,7 @@ import AboutMe from "./pages/AboutMe";
 import MovieGallery from "./pages/MovieGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
+import ShowsPage from "./pages/ShowsPage";
 
 export default function App() {
   return (
@@ -17,6 +18,10 @@ export default function App() {
       <Switch>
         <Route path="/aboutme">
           <AboutMe></AboutMe>
+        </Route>
+
+        <Route path="/showspage">
+          <ShowsPage></ShowsPage>
         </Route>
 
         <Route path="/moviegallery">
