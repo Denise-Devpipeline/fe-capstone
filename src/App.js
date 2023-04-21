@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Carousel from "carousel-carousel-react";
 // import MovieGallery from "./pages/MovieGallery";
 
 import Navbar from "./components/Navbar";

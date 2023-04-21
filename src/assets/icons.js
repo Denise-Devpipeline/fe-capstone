@@ -1,9 +1,8 @@
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-//Need to import the brands for github icon
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 
-// function initIcons() {
-//   return library.add(faEnvelope, faLock);
-// }
+function initIcons() {
+  return library.add(faEnvelope, faLock);
+}
 
-// export default initIcons;
+export default initIcons;
