@@ -1,5 +1,5 @@
 import React from "react";
-import animepic from "../images/animepic.jpg";
+import CoolRubberDuck from "../images/cool-rubber-duck.avif";
 
 export default function Home() {
   return (
@@ -9,7 +9,11 @@ export default function Home() {
       </div>
 
       <div className="pic-name-msg-container">
-        <img src={animepic} alt="Anime photo of the developer" />
+        <img
+          id="duck"
+          src={CoolRubberDuck}
+          alt="Rubber Duck, A develpers little helper!"
+        />
         <div className="text-container-wrapper">
           <div className="text-container1">Denise Justice</div>
 

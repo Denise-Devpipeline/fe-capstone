@@ -1,9 +1,16 @@
 import React from "react";
+import ShowAthome from "../images/showathome.jpg";
 
 export default function AboutMe() {
   return (
     <div className="image-container">
-      <div className="image-wrapper">Image</div>
+      <div className="image-wrapper">
+        <img
+          id="tvathome"
+          src={ShowAthome}
+          alt="Woman watching a movie in bed with popcorn even though you should never eat in bed."
+        />
+      </div>
 
       <div className="para-container">
         <h1>My Project</h1>

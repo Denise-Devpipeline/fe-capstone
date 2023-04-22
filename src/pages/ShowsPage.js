@@ -18,6 +18,7 @@ export default function ShowsPage() {
         <div className="img-container">
           <figure>
             <img
+              id="tvmazeimages"
               src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"
               alt="Show Cover"
             ></img>

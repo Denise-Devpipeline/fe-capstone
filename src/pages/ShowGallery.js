@@ -3,6 +3,13 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Carousel from "carousel-carousel-react";
 
+function prepareImages(images) {
+  if (!images) {
+    return [];
+  }
+  return Object.keys(images).map((key) => images[key].medium);
+}
+
 export default function MovieGallery() {
   const [movies, setMovies] = useState([]);
 
@@ -18,24 +25,30 @@ export default function MovieGallery() {
   return (
     <div className="movie-container">
       <div>
-        <Carousel
-          slidesPerPage={3}
-          slidesPerScroll={1}
-          pagination={false}
-          infinite
-          autoPlay={3000}
-          centered
-        >
-          {movies.map((movie) => (
-            <div key={movie.id}>
-              {movie.name && <h3>{movie.name}</h3>}
-              {movie.image && <img src={movie.image.medium} alt={movie.name} />}
-              {movie.summary && <p>{movie.summary}</p>}
+        {movies && movies.length > 0 && (
+          <Carousel
+            slidesPerPage={3}
+            slidesPerScroll={1}
+            pagination={false}
+            infinite
+            autoPlay={3000}
+            centered
+          >
+            {movies.map((movie) => (
+              <div key={movie.id}>
+                {movie.name && <h3>{movie.name}</h3>}
+                {movie.image && (
+                  <img src={movie.image.medium} alt={movie.name} />
+                )}
+                {movie.summary && <p>{movie.summary}</p>}
 
-              {movie.id && <Link to={`/movies/${movie.id}`}>{movie.name}</Link>}
-            </div>
-          ))}
-        </Carousel>
+                {movie.id && (
+                  <Link to={`/movies/${movie.id}`}>{movie.name}</Link>
+                )}
+              </div>
+            ))}
+          </Carousel>
+        )}
       </div>
     </div>
   );

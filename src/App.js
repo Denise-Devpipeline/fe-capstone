@@ -1,8 +1,8 @@
 import React from "react";
-import Carousel from "carousel-carousel-react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { useLocation } from "react-router-dom";
+// import Carousel from "carousel-carousel-react";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
