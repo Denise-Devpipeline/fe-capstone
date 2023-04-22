@@ -1,12 +1,13 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Carousel from "carousel-carousel-react";
-// import MovieGallery from "./pages/MovieGallery";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
-import MovieGallery from "./pages/MovieGallery";
+import ShowGallery from "./pages/ShowGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
 import ShowsPage from "./pages/ShowsPage";
@@ -17,25 +18,30 @@ export default function App() {
       <Navbar />
       <Switch>
         <Route path="/aboutme">
-          <AboutMe></AboutMe>
+          <AboutMe />
         </Route>
 
         <Route path="/showspage">
           <ShowsPage></ShowsPage>
         </Route>
 
-        <Route path="/moviegallery">
-          <MovieGallery></MovieGallery>
+        <Route path="/showgallery">
+          <ShowGallery></ShowGallery>
         </Route>
 
         <Route path="/contactme">
           <ContactMe></ContactMe>
         </Route>
 
-        <Route path="/">
+        {/* <Route path="/FontAwesomeIcon">
+          <FontAwesomeIcon></FontAwesomeIcon>
+        </Route> */}
+
+        <Route exact path="/">
           <Home></Home>
         </Route>
       </Switch>
+
       <Footer />
     </BrowserRouter>
   );

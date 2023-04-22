@@ -1,4 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+
+// import { faLinkedIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -11,10 +14,17 @@ export default function Footer() {
 
         <div className="right-footer">
           <a href="mailto:email@sample.com?">digitaldee@gmail.com</a>
-          <div className="phone">555-222-1818</div>
-          <a href="https://www.linkedin.com/">
-            <i className="fab fa-linkedin">LinkedInIcon</i>
-          </a>
+        </div>
+
+        <div className="phone">555-222-1818</div>
+
+        <div className="right-nav">
+          ;
+          {/* <NavLink>
+            <a href="http://www.linkedin.com/in/denise-justice-utah">
+              <FontAwesomeIcon icon="{FontAwesomeIcon}" />
+            </a>
+          </NavLink> */}
         </div>
       </div>
     </div>

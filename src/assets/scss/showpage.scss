@@ -9,8 +9,7 @@
 }
 
 .show-cover {
-  height: 100%;
-  width: 100%;
+  @include width-height(100%, 100%);
   display: flex;
 }
 .img-container img {
@@ -19,15 +18,13 @@
   border-radius: 5px;
 }
 .follow-button button {
+  @include width-height(200px, 30px);
   background-color: rgb(39, 109, 39);
   border-radius: 5px;
   color: #f6f1f1;
-  width: 200px;
-  height: 30px;
   font-size: 15px;
 }
 
 .show-info p {
-  width: 100vh;
-  height: 100%;
+  @include width-height(100vh, 100%);
 }

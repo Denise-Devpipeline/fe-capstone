@@ -1,5 +1,4 @@
 import React from "react";
-import Carousel from "carousel-carousel-react";
 
 export default function ShowsPage() {
   return (
@@ -18,7 +17,10 @@ export default function ShowsPage() {
       <div className="show-cover">
         <div className="img-container">
           <figure>
-            <img src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"></img>
+            <img
+              src="https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg"
+              alt="Show Cover"
+            ></img>
           </figure>
 
           <div className="follow-button">

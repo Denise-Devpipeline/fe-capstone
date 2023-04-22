@@ -4,17 +4,16 @@ body {
 }
 
 .top-header-container {
-  display: flex;
+  @include displays(flex);
+  @include aligning(center);
   flex-direction: column;
-  align-items: center;
   margin: 0;
   width: 100%;
   background-color: rgb(0, 0, 0);
   color: #f6f1f1;
 
   .header-title-wrapper {
-    // padding-top: 30px;
-    // text-align: center;
+    padding-top: 30px;
     font-size: 36px;
     margin: 40px;
   }
@@ -22,15 +21,16 @@ body {
 .pic-name-msg-container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .text-container-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding-left: 6%;
+  // display: flex;
+  // flex-direction: column;
+  padding-left: 10%;
 }
 .text-container1 {
+  width: 28vw;
   font-size: 34px;
   padding: 7px;
 }
@@ -41,9 +41,9 @@ body {
 }
 
 img {
+  @include margins(2%, 0, 2%, 25%);
   max-width: 100%;
-  width: 30%;
+  width: 20%;
   border-radius: 50%;
-  margin: 2% 0 2% 25%;
   border: 15px solid #146c94;
 }

@@ -2,18 +2,41 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans&family=Tenor+Sans&display=swap");
 
-@import url("./moviegallery.scss");
+@import url("./showgallery.scss");
 
 @mixin width-height($width, $height) {
   width: $width;
   height: $height;
 }
 
-// border-radius: 50%;
-// background-size: contain;
-// background-repeat: no-repeat;
-// background-position: 50% 50%;
-// position: absolute;
-// z-index: -1;
-// top: 150px;
-// left: 300px;
+@mixin margins($margin...) {
+  margin: $margin;
+}
+
+@mixin padding($padding...) {
+  padding: $padding;
+}
+
+@mixin borders($border...) {
+  border: $border;
+  outline: none;
+}
+
+@mixin displays($display...) {
+  display: $display;
+}
+
+@mixin aligning($align-items...) {
+  align-items: $align-items;
+}
+
+@mixin fonts($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin hover {
+  &:not([disabled]):hover {
+    @content;
+  }
+}
