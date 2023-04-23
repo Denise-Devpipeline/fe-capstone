@@ -1,8 +1,5 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { useLocation } from "react-router-dom";
-// import Carousel from "carousel-carousel-react";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
@@ -12,6 +9,7 @@ import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
 import ShowsPage from "./pages/ShowsPage";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function App() {
   return (

@@ -3,11 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import Carousel from "carousel-carousel-react";
 
-function Images(images) {
-  if (!images) {
-    return [];
-  }
-  return Object.keys(images).map((key) => images[key].medium);
+function Images(mediumImageUrl) {
+  return mediumImageUrl;
 }
 
 export default function MovieGallery() {
@@ -38,12 +35,14 @@ export default function MovieGallery() {
               <div key={movie.id} className="movie-item">
                 {movie.name && <h3>{movie.name}</h3>}
                 {movie.image && (
-                  <img src={Images(movie.image)[0]} alt={movie.name} />
+                  <img src={Images(movie.image.medium)} alt={movie.name} />
                 )}
-                {movie.summary && <p>{movie.summary}</p>}
+                {movie.summary && (
+                  <p>dangerouslySetInnerHTML={{ __html: movie.summary }}</p>
+                )}
 
                 {movie.id && (
-                  <Link to={`/movies/${movie.id}`}>{movie.name}</Link>
+                  <Link to={`/movies/\${movie.id}`}>{movie.name}</Link>
                 )}
               </div>
             ))}

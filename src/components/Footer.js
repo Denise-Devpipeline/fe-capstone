@@ -7,8 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-  const location = useLocation(); // import { useLocation } from 'react-router-dom'
-
+  const location = useLocation();
   return (
     <div>
       <NavLink />
