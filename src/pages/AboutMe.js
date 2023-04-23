@@ -1,14 +1,14 @@
 import React from "react";
-import ShowAthome from "../images/showathome.jpg";
+import DigitalFibersPic from "../images/digitalfibers.jpg";
 
 export default function AboutMe() {
   return (
     <div className="image-container">
       <div className="image-wrapper">
         <img
-          id="tvathome"
-          src={ShowAthome}
-          alt="Woman watching a movie in bed with popcorn even though you should never eat in bed."
+          id="digitalfiberspic"
+          src={DigitalFibersPic}
+          alt="Closeup of digital fibers."
         />
       </div>
 

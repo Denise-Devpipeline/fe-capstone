@@ -31,6 +31,7 @@ export default function ShowsPage() {
 
         <div className="show-info">
           <p>
+            <h2>Title of Movie</h2>
             Under the Dome is the story of a small town that is suddenly and
             inexplicably sealed off from the rest of the world by an enormous
             transparent dome. The town's inhabitants must deal with surviving

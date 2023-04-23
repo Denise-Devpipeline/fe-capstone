@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AboutMe from "./pages/AboutMe";
-import ShowGallery from "./pages/ShowGallery";
+import MovieGallery from "./pages/MovieGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
 import ShowsPage from "./pages/ShowsPage";
@@ -17,7 +17,7 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route path="/aboutme">
+        <Route exact path="/aboutme">
           <AboutMe />
         </Route>
 
@@ -25,8 +25,8 @@ export default function App() {
           <ShowsPage></ShowsPage>
         </Route>
 
-        <Route path="/showgallery">
-          <ShowGallery></ShowGallery>
+        <Route path="/moviegallery">
+          <MovieGallery></MovieGallery>
         </Route>
 
         <Route path="/contactme">
@@ -41,7 +41,6 @@ export default function App() {
           <Home></Home>
         </Route>
       </Switch>
-
       <Footer />
     </BrowserRouter>
   );

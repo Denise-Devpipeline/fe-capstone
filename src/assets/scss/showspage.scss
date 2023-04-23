@@ -1,0 +1,49 @@
+.page-subnav {
+  display: flex;
+  list-style: none;
+  text-align: justify;
+}
+
+.page-subnav li {
+  display: flex;
+  list-style: none;
+  padding: 2vh 0 0 5vh;
+}
+
+.img-container figure {
+  margin: 0;
+  padding: 5vh 5vh 0 50vh;
+  .follow-button {
+    position: absolute;
+  }
+}
+.follow-button {
+  padding-left: 275px;
+  padding-bottom: 100px;
+}
+.follow-button button {
+  @include width-height(200px, 30px);
+  background-color: rgb(62, 111, 62);
+  border-radius: 5px;
+  color: #f6f1f1;
+  font-size: 15px;
+}
+
+.show-cover {
+  @include width-height(100%, 100%);
+  display: flex;
+}
+
+.show-info {
+  position: relative;
+}
+
+.show-info p {
+  @include width-height(50vh, 100%);
+  @include padding(10px);
+}
+#tvmazeimages {
+  width: 200px;
+  height: 280px;
+  border-radius: 5px;
+}
