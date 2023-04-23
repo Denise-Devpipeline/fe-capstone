@@ -11,6 +11,7 @@ import MovieGallery from "./pages/MovieGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
 import ShowsPage from "./pages/ShowsPage";
+import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function App() {
   return (
@@ -33,15 +34,13 @@ export default function App() {
           <ContactMe></ContactMe>
         </Route>
 
-        {/* <Route path="/FontAwesomeIcon">
-          <FontAwesomeIcon></FontAwesomeIcon>
-        </Route> */}
-
         <Route exact path="/">
           <Home></Home>
         </Route>
       </Switch>
       <Footer />
+      <FontAwesomeIcon />
+      <NavLink />
     </BrowserRouter>
   );
 }

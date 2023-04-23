@@ -8,6 +8,10 @@
   display: flex;
   list-style: none;
   padding: 2vh 0 0 5vh;
+  align-items: center;
+  ul :hover {
+    color: #19a7ce;
+  }
 }
 
 .img-container figure {
