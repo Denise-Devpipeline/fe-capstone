@@ -1,18 +1,10 @@
 import React from "react";
-import {
-  NavLink,
-  useLocation,
-} from "react-router-dom/cjs/react-router-dom.min";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
-  const location = useLocation();
   return (
     <div>
-      <NavLink />
-      <useLocation />
-
       <div className="footer-container">
         <div className="left-footer">
           <div className="footer-wrapper">
@@ -37,7 +29,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {location && location.pathname}
     </div>
   );
 }

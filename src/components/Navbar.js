@@ -1,15 +1,9 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const location = useLocation();
-  const pathname = location?.pathname || "";
-  // const { pathname } = location;
-
   return (
     <div>
-      {/* <NavLink />
-      <useLocation /> */}
       <div className="navbar-container">
         <div className="left-nav">
           <div className="title-wrapper">
@@ -24,8 +18,8 @@ export default function Navbar() {
             <NavLink className="about-page" to="/aboutme">
               About
             </NavLink>
-            <NavLink className="show-page" to="/showgallery">
-              Show Gallery
+            <NavLink className="show-page" to="/moviegallery">
+              Movie Gallery
             </NavLink>
             <NavLink className="contact-page" to="/contactme">
               Contact
@@ -33,7 +27,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      {pathname}
     </div>
   );
 }

@@ -8,8 +8,6 @@ import MovieGallery from "./pages/MovieGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
 import ShowsPage from "./pages/ShowsPage";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function App() {
   return (
@@ -37,8 +35,6 @@ export default function App() {
         </Route>
       </Switch>
       <Footer />
-      <FontAwesomeIcon />
-      <NavLink />
     </BrowserRouter>
   );
 }
