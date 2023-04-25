@@ -24,7 +24,26 @@ export default function MovieGallery() {
     return movies.map((movie) => {
       return (
         <div>
+          <div className="movie-card" key={movie.id}></div>
+
           <img src={movie.image.medium} alt="Show Cover" />
+
+          <div className="movie-info">
+            <h3>{movie.name}</h3>
+            <p>Type: {movie.type}</p>
+            <p>Language: {movie.language}</p>
+            <p>Genres: {movie.genres.join(", ")}</p>
+            <p>Status: {movie.status}</p>
+            <p>Runtime: {movie.runtime} minutes</p>
+            <p>Premiered: {movie.premiered}</p>
+            <p>Ended: {movie.ended || "N/A"}</p>
+            <p>
+              Schedule: {movie.schedule.days.join(", ")} at{" "}
+              {movie.schedule.time}
+              <p>Official Site: {movie.officialSite}</p>
+              <p>Summary: {movie.summary}</p>
+            </p>
+          </div>
         </div>
       );
     });
@@ -56,7 +75,8 @@ export default function MovieGallery() {
               <div style={{ backgroundImage: `url(${images[2]})` }}>
                 <span>Slide 3</span>
               </div>
-            </div>
+            </div>{" "}
+            */ //{" "}
           </Slide>
         )}
       </div>

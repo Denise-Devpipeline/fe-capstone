@@ -1,22 +1,25 @@
 body {
   margin: 0;
-  height: 100%;
 }
-//HOME PAGE STYLING
+
 .top-header-container {
   color: #f6f1f1;
+  padding: 40px;
+
   .header-title-wrapper {
-    @include margins(40px 40px 40px 140px);
-    padding-top: 30px;
+    @include margins(40px 40px 40px 240px);
     font-size: 36px;
+    height: 100%;
   }
 }
 
 .pic-name-msg-container {
-  position: relative;
-  text-align: center;
   color: white;
   height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include margins(40px 40px 40px 240px);
 
   #darkbackground {
     position: fixed;
@@ -26,6 +29,20 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header-container {
+    .header-title-wrapper {
+      font-size: 28px;
+    }
+  }
+
+  .pic-name-msg-container {
+    .text-container2 {
+      font-size: 24px;
+    }
   }
 }
 
