@@ -1,30 +1,43 @@
 body {
-  margin: 0;
+  margin: 0%;
   width: 100%;
+  height: 100%;
 }
-
 .footer-container {
-  display: flex;
+  max-height: 100vh;
+  box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+.footer-wrapper {
+  background-color: #146c94;
+  color: #f6f1f1;
+  padding: 10px;
+  text-align: center;
+  height: 20vh;
   width: 100%;
-  height: 120px;
-  bottom: 0;
-  position: static;
-  left: 0;
-  background-color: #19a7ce;
+  line-height: 2;
 
-  .left-footer {
-    width: 50%;
-    padding: 2% 3% 0% 10%;
-    margin-left: 0%;
+  .left-footer,
+  .right-footer {
+    width: 20%;
   }
 
-  .footer-wrapper {
-    padding: 5% 2% 0 5%;
+  .left-footer {
+    float: left;
+  }
+  .thefooter-wrapper span {
+    display: inline;
+  }
+  .thefooter-wrapper a {
+    text-decoration: none;
+    color: #f6f1f1;
   }
 
   .right-footer {
-    width: 50%;
-    padding: 2% 3% 0% 50%;
-    margin-left: 0%;
+    float: right;
   }
+}
+.right-email a {
+  font-size: 30px;
+  color: #f6f1f1;
 }

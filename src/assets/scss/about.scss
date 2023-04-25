@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  height: 100%;
+  background: #f6f1f1;
+}
+
+.about-container {
+  background-color: black;
+  color: #19a7ce;
+  height: 100%;
+  width: 150vh;
+  margin: auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.para-container {
+  height: 100%;
+  color: #19a7ce;
+  margin-bottom: 1em;
+  letter-spacing: 2px;
+}
+h1 {
+  @include margins(1em 0em 0 1em);
+  padding-top: 2em;
+}
+p {
+  @include margins(1em 10em 0 10em);
+  text-align: justify;
+}
+
+.para1-wrapper p {
+  font-size: 20px;
+}
+
+.project-container {
+  @include margins(2em);
+}
+.project-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+h2 {
+  margin-top: 5em;
+  margin-bottom: 1.8em;
+  text-align: center;
+}
+
+.project1 {
+  background-color: #19a7ce;
+  color: #f6f1f1;
+  width: 20%;
+  padding: 4em;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 5px;
+}

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+//HOME PAGE STYLING
+.top-header-container {
+  color: #f6f1f1;
+  .header-title-wrapper {
+    @include margins(40px 40px 40px 140px);
+    padding-top: 30px;
+    font-size: 36px;
+  }
+}
+
+.pic-name-msg-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 100%;
+
+  #darkbackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+.text-container-wrapper {
+  padding-left: 10%;
+}
+.text-container2 {
+  width: 28vw;
+  font-size: 28px;
+  padding: 7px;
+}

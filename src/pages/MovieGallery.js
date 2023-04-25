@@ -18,9 +18,28 @@ export default function MovieGallery() {
     });
   }, []);
 
+  console.log(movies);
+
+  const renderCards = () => {
+    return movies.map((movie) => {
+      return (
+        <div>
+          <img src={movie.image.medium} alt="Show Cover" />
+        </div>
+      );
+    });
+  };
   return (
     <div className="movie-container">
-      <div>
+      <div
+        style={{
+          width: "90%",
+          display: "flex",
+          height: "auto",
+          flexWrap: "wrap",
+        }}
+      >
+        {renderCards()}
         {movies && movies.length > 0 && (
           <Slide>
             <div className="each-slide-effect">

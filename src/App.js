@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import AboutMe from "./pages/AboutMe";
+import About from "./pages/About";
 import MovieGallery from "./pages/MovieGallery";
 import ContactMe from "./pages/ContactMe";
 import Footer from "./components/Footer";
@@ -14,8 +14,8 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/aboutme">
-          <AboutMe />
+        <Route exact path="/about">
+          <About></About>
         </Route>
 
         <Route path="/showspage">

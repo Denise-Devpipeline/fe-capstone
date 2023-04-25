@@ -1,5 +1,5 @@
 import React from "react";
-import CoolRubberDuck from "../images/cool-rubber-duck.avif";
+import DarkBackground from "../images/dark-background-.jpg";
 
 export default function Home() {
   return (
@@ -10,13 +10,11 @@ export default function Home() {
 
       <div className="pic-name-msg-container">
         <img
-          id="duck"
-          src={CoolRubberDuck}
-          alt="Rubber Duck, A develpers little helper!"
+          id="darkbackground"
+          src={DarkBackground}
+          alt="Digital Background!"
         />
         <div className="text-container-wrapper">
-          <div className="text-container1">Denise Justice</div>
-
           <div className="text-container2">
             Code, Design, Improve.....Repeat!
           </div>

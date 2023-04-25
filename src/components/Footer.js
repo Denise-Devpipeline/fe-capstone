@@ -6,25 +6,31 @@ export default function Footer() {
   return (
     <div>
       <div className="footer-container">
-        <div className="left-footer">
-          <div className="footer-wrapper">
-            <span>&#169; 2023 Digital Dee</span>
-            <div className="design-title">Denise Justice</div>
+        <div className="footer-wrapper">
+          <div className="left-footer">
+            <div className="thefooter-wrapper">
+              <span>
+                &#169; 2023 Digital Dee
+                <div className="design-title">Denise Justice</div>
+              </span>
+            </div>
           </div>
-        </div>
 
-        <div className="right-footer">
-          <div className="footer-wrapper">
-            <a href="mailto:email@sample.com?">digitaldee@gmail.com</a>
-            <div className="phone">555-222-1818</div>
-            <div className="right-nav">
-              <a
-                href="https://www.linkedin.com/in/denise-justice-utah"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
+          <div className="right-footer">
+            <div className="thefooter-wrapper">
+              <a href="mailto:email@sample.com?">digitaldee@gmail.com</a>
+              <div className="phone">555-222-1818</div>
+
+              <div className="right-email">
+                <a
+                  // id="linkedin"
+                  href="https://www.linkedin.com/in/denise-justice-utah"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+              </div>
             </div>
           </div>
         </div>
