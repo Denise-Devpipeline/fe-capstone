@@ -18,12 +18,16 @@ export default function App() {
           <About></About>
         </Route>
 
-        <Route path="/showspage">
+        {/* <Route path="/showspage">
           <ShowsPage></ShowsPage>
-        </Route>
+        </Route> */}
 
         <Route path="/moviegallery">
           <MovieGallery></MovieGallery>
+        </Route>
+
+        <Route exact path="/movies/:id" component={ShowsPage}>
+          <ShowsPage></ShowsPage>
         </Route>
 
         <Route path="/contactme">

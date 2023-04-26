@@ -3,8 +3,9 @@ import axios from "axios";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-export default function MovieGallery() {
+export default function MovieGallery(props) {
   const [movies, setMovies] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const images = [
     "https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
@@ -13,21 +14,31 @@ export default function MovieGallery() {
   ];
 
   useEffect(() => {
-    axios.get("https://api.tvmaze.com/shows").then((response) => {
-      setMovies(response.data);
-    });
-  }, []);
+    axios
+      .get(`https://api.tvmaze.com/shows/props.match.params.id}`)
+      .then((response) => {
+        setMovies(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [props]);
 
-  console.log(movies);
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const renderCards = () => {
-    return movies.map((movie) => {
+    return filteredMovies.map((movie) => {
       return (
-        <div>
-          <div className="movie-card" key={movie.id}></div>
+        <div className="movie-card" key={movie.id}>
+          {/* to={`/ShowsPage/${movie.id}`}> */}
 
           <img src={movie.image.medium} alt="Show Cover" />
-
           <div className="movie-info">
             <h3>{movie.name}</h3>
             <p>Type: {movie.type}</p>
@@ -40,44 +51,42 @@ export default function MovieGallery() {
             <p>
               Schedule: {movie.schedule.days.join(", ")} at{" "}
               {movie.schedule.time}
-              <p>Official Site: {movie.officialSite}</p>
-              <p>Summary: {movie.summary}</p>
             </p>
+            <p>Official Site: {movie.officialSite}</p>
+            <p>Summary: {movie.summary}</p>
           </div>
         </div>
       );
     });
   };
+
   return (
     <div className="movie-container">
-      <div
-        style={{
-          width: "90%",
-          display: "flex",
-          height: "auto",
-          flexWrap: "wrap",
-        }}
-      >
-        {renderCards()}
-        {movies && movies.length > 0 && (
-          <Slide>
-            <div className="each-slide-effect">
-              <div style={{ backgroundImage: `url(${images[0]})` }}>
-                <span>Slide 1</span>
-              </div>
-            </div>
-            <div className="each-slide-effect">
-              <div style={{ backgroundImage: `url(${images[1]})` }}>
-                <span>Slide 2</span>
-              </div>
-            </div>
-            <div className="each-slide-effect">
-              <div style={{ backgroundImage: `url(${images[2]})` }}>
-                <span>Slide 3</span>
-              </div>
-            </div>{" "}
-            */ //{" "}
-          </Slide>
+      <div style={{ width: "90%", display: "flex", flexWrap: "wrap" }}>
+        <div style={{ margin: "20px 0" }}>
+          <label htmlFor="search">Search:</label>
+          <input
+            type="text"
+            id="search"
+            value={searchQuery}
+            onChange={handleSearch}
+          />
+        </div>
+        {filteredMovies.length > 0 ? (
+          <>
+            <Slide easing="ease">
+              {images.map((image, index) => (
+                <div className="each-slide" key={index}>
+                  <div style={{ backgroundImage: `url(${image})` }}>
+                    <span>Slide {index + 1}</span>
+                  </div>
+                </div>
+              ))}
+            </Slide>
+            {renderCards()}
+          </>
+        ) : (
+          <p>No movies found.</p>
         )}
       </div>
     </div>

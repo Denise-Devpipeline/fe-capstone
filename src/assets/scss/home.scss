@@ -8,18 +8,16 @@ body {
 
   .header-title-wrapper {
     @include margins(40px 40px 40px 240px);
+    padding-top: 30px;
     font-size: 36px;
     height: 100%;
   }
 }
 
 .pic-name-msg-container {
+  @include margins(40px 40px 40px 240px);
   color: white;
   height: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-  @include margins(40px 40px 40px 240px);
 
   #darkbackground {
     position: fixed;
@@ -47,7 +45,7 @@ body {
 }
 
 .text-container-wrapper {
-  padding-left: 10%;
+  padding-left: 1%;
 }
 .text-container2 {
   width: 28vw;
