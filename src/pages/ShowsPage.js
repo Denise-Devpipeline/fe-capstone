@@ -4,6 +4,8 @@ import axios from "axios";
 export default function ShowsPage(props) {
   const [show, setShow] = useState({});
   const { show_id } = props.match.params;
+  const [review, setReview] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -21,17 +23,38 @@ export default function ShowsPage(props) {
     return () => controller.abort();
   }, [show_id]);
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setSubmitted(true);
+  };
+
+  const handleChange = (event) => {
+    setReview(event.target.value);
+  };
+
   return (
     <div className="page-subnav">
       <ul>
         <li>Back to Movie Gallery</li>
         <li>Home</li>
-        <li>Episodes</li>
-        <li>Seasons</li>
-        <li>Cast</li>
-        <li>Crew</li>
-        <li>Characters</li>
-        <li>News</li>
+        <div className="movie-info">
+          <h3>{show.name}</h3>
+          <p>Type: {show.type}</p>
+          <p>Rating: {show.rating?.average}</p>
+          <p>Language: {show.language}</p>
+          <p>Genres: {show.genres?.join(", ")}</p>
+          <p>Status: {show.status}</p>
+          <p>Runtime: {show.runtime} minutes</p>
+          <p>Premiered: {show.premiered}</p>
+          <p>Ended: {show.ended || "N/A"}</p>
+          <p>
+            Schedule: {show.schedule?.days.join(", ")} at {show?.schedule?.time}
+          </p>
+          <p>
+            <a href={show.officialSite}>Official Site:</a>
+          </p>
+          <p>Summary: {show.summary}</p>
+        </div>
       </ul>
 
       <div className="show-cover">
@@ -48,19 +71,21 @@ export default function ShowsPage(props) {
             <button type="button">Follow</button>
           </div>
         </div>
+      </div>
 
-        <div className="show-info">
-          <p>
-            <div className="show-page-h2">
-              <h2>Title of Movie</h2>
-            </div>
-            Under the Dome is the story of a small town that is suddenly and
-            inexplicably sealed off from the rest of the world by an enormous
-            transparent dome. The town's inhabitants must deal with surviving
-            the post-apocalyptic conditions while searching for answers about
-            the dome, where it came from and if and when it will go away.
-          </p>
-        </div>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="review">Write a review:</label>
+          <textarea
+            id="reivew"
+            name="review"
+            value={review}
+            onChange={handleChange}
+          />
+          <button type="submit">Submit</button>
+        </form>
+
+        {submitted && <p>Thanks for the review!</p>}
       </div>
     </div>
   );
