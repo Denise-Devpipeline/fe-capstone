@@ -14,21 +14,16 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/about">
-          <About></About>
-        </Route>
-
-        {/* <Route path="/showspage">
-          <ShowsPage></ShowsPage>
-        </Route> */}
+        <Route exact path="/about" component={About} />
+        <Route path="/showspage/:show_id" component={ShowsPage} />
 
         <Route path="/moviegallery">
-          <MovieGallery></MovieGallery>
+          <MovieGallery />
         </Route>
 
-        <Route exact path="/movies/:id" component={ShowsPage}>
+        {/* <Route exact path="/movies/:id" component={ShowsPage}>
           <ShowsPage></ShowsPage>
-        </Route>
+        </Route> */}
 
         <Route path="/contactme">
           <ContactMe></ContactMe>
