@@ -1,5 +1,8 @@
 import React from "react";
+import SsLa from "../images/ssla-web-page.png";
 import ResumeWebPage from "../images/resume-web-page.png";
+import WixWebSite from "../images/wix-web-page.png";
+import RandomGen from "../images/random-generator.png";
 
 export default function About() {
   return (
@@ -58,7 +61,7 @@ export default function About() {
           <div className="project1">
             <img
               id="resume-web-page"
-              src={ResumeWebPage}
+              src={SsLa}
               alt="Resume web page screenshot"
             />
           </div>
@@ -72,14 +75,14 @@ export default function About() {
           <div className="project1">
             <img
               id="resume-web-page"
-              src={ResumeWebPage}
+              src={WixWebSite}
               alt="Resume web page screenshot"
             />
           </div>
           <div className="project1">
             <img
               id="resume-web-page"
-              src={ResumeWebPage}
+              src={RandomGen}
               alt="Resume web page screenshot"
             />
           </div>

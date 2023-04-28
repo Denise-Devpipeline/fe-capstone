@@ -21,16 +21,12 @@ export default function App() {
           <MovieGallery />
         </Route>
 
-        {/* <Route exact path="/movies/:id" component={ShowsPage}>
-          <ShowsPage></ShowsPage>
-        </Route> */}
-
         <Route path="/contactme">
-          <ContactMe></ContactMe>
+          <ContactMe />
         </Route>
 
         <Route exact path="/">
-          <Home></Home>
+          <Home />
         </Route>
       </Switch>
       <Footer />

@@ -35,29 +35,24 @@ h1 {
 .project-container {
   @include margins(2em);
 }
-.project-wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 40px;
-}
+
 h2 {
   margin-top: 5em;
   margin-bottom: 1.8em;
   text-align: center;
 }
 
-#darkbackground {
-  width: 10%;
-  height: 10%;
-  object-fit: contain;
-  // z-index: -1;
+.project-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
 }
-// .project1 {
-//   background-color: #19a7ce;
-//   color: #f6f1f1;
-//   width: 20%;
-//   padding: 4em;
-//   box-sizing: border-box;
-//   text-align: center;
-//   border-radius: 5px;
-// }
+
+.project1 {
+  margin: 0 10px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

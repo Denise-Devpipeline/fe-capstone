@@ -13,6 +13,9 @@ body {
     height: 100%;
   }
 }
+.text-container2 {
+  font-size: 24px;
+}
 
 .pic-name-msg-container {
   @include margins(40px 40px 40px 240px);
@@ -30,25 +33,27 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .top-header-container {
-    .header-title-wrapper {
-      font-size: 28px;
-    }
-  }
+//Need more practice with media queries.
 
-  .pic-name-msg-container {
-    .text-container2 {
-      font-size: 24px;
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   .top-header-container {
+//     .header-title-wrapper {
+//       font-size: 28px;
+//     }
+//   }
 
-.text-container-wrapper {
-  padding-left: 1%;
-}
-.text-container2 {
-  width: 28vw;
-  font-size: 28px;
-  padding: 7px;
-}
+//   .pic-name-msg-container {
+//     .text-container2 {
+//       font-size: 24px;
+//     }
+//   }
+// }
+
+// .text-container-wrapper {
+//   padding-left: 1%;
+// }
+// .text-container2 {
+//   width: 28vw;
+//   font-size: 28px;
+//   padding: 7px;
+// }
