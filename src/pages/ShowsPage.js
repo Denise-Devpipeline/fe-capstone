@@ -26,6 +26,7 @@ export default function ShowsPage(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setSubmitted(true);
+    setReview("");
   };
 
   const handleChange = (event) => {
@@ -34,19 +35,27 @@ export default function ShowsPage(props) {
 
   return (
     <div className="page-subnav">
+      <div className="show-cover">
+        <figure>
+          <img id="tvmazeimages" src={show.image?.original} alt="Show Cover" />
+        </figure>
+
+        <div className="follow-button">
+          <button type="button">Follow</button>
+        </div>
+      </div>
+
       <ul>
-        <li>Back to Movie Gallery</li>
-        <li>Home</li>
         <div className="movie-info">
           <h3>{show.name}</h3>
-          <p>Type: {show.type}</p>
           <p>Rating: {show.rating?.average}</p>
-          <p>Language: {show.language}</p>
-          <p>Genres: {show.genres?.join(", ")}</p>
-          <p>Status: {show.status}</p>
           <p>Runtime: {show.runtime} minutes</p>
+          <p>Genres: {show.genres?.join(", ")}</p>
           <p>Premiered: {show.premiered}</p>
+          <p>Status: {show.status}</p>
           <p>Ended: {show.ended || "N/A"}</p>
+          <p>Language: {show.language}</p>
+          <p>Type: {show.type}</p>
           <p>
             Schedule: {show.schedule?.days.join(", ")} at {show?.schedule?.time}
           </p>
@@ -57,23 +66,7 @@ export default function ShowsPage(props) {
         </div>
       </ul>
 
-      <div className="show-cover">
-        <div className="img-container">
-          <figure>
-            <img
-              id="tvmazeimages"
-              src={show.image?.original}
-              alt="Show Cover"
-            />
-          </figure>
-
-          <div className="follow-button">
-            <button type="button">Follow</button>
-          </div>
-        </div>
-      </div>
-
-      <div>
+      <div className="form-review">
         <form onSubmit={handleSubmit}>
           <label htmlFor="review">Write a review:</label>
           <textarea

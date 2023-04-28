@@ -1,23 +1,45 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+
+export default function ContactMe() {
+  return (
+    <div>
+      <Contact />
+    </div>
+  );
+}
 
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const history = useHistory();
+  const [emailAlert, setEmailAlert] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    history.push("/thank-you");
+    if (name !== "" && email !== "" && message !== "") {
+      setEmailAlert(true);
+    } else {
+      setEmailAlert(false);
+    }
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
+  const handleReset = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setEmailAlert(false);
   };
 
   return (
     <div className="contact-form-container">
+      {emailAlert && <div>Your email has been sent!</div>}
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} on Reset={handleReset}>
         <label htmlFor="name">Name</label>
         <input
           type="text"
@@ -46,14 +68,6 @@ function Contact() {
 
         <button type="submit">Send Message</button>
       </form>
-    </div>
-  );
-}
-
-export default function ContactMe() {
-  return (
-    <div>
-      <Contact />
     </div>
   );
 }

@@ -1,28 +1,19 @@
 .page-subnav {
   display: flex;
-  text-align: justify;
-  width: auto;
 }
 
-.page-subnav li {
-  display: flex;
-  list-style: none;
-  padding: 2vh 0 0 5vh;
-  align-items: center;
-  ul :hover {
-    color: #19a7ce;
+.show-cover {
+  figure {
+    margin: 0;
+    padding: 5vh 0 0 4vw;
+    .follow-button {
+      position: absolute;
+    }
   }
 }
 
-.img-container figure {
-  margin: 0;
-  padding: 5vh 0 0 19vw;
-  .follow-button {
-    position: absolute;
-  }
-}
 .follow-button {
-  padding-left: 275px;
+  padding-left: 4vw;
   padding-bottom: 100px;
 }
 .follow-button button {
@@ -33,21 +24,42 @@
   font-size: 15px;
 }
 
-.show-cover {
-  @include width-height(80%, 100%);
+.movie-info {
+  width: 100%;
+  p {
+    margin-left: 2vw;
+    text-align: left;
+  }
+}
+
+.form-review {
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.show-info {
-  position: relative;
+.form-review label {
+  font-size: 1.5rem;
 }
 
-.show-info p {
-  @include width-height(40vw, 100%);
-  @include padding(0 5px 0 2px);
+.form-reivew textarea {
+  font-size: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  height: 200px;
+  resize: vertical;
 }
-.show-page-h2 h2 {
-  @include padding(0 5px 0 2px);
+
+.form-review button[type="submit"] {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  background-color: #146c94;
+  color: #f6f1f1;
+  font-size: 1rem;
+  cursor: pointer;
+  :hover {
+    background-color: black;
+  }
 }
 
 #tvmazeimages {

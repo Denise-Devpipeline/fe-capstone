@@ -8,8 +8,8 @@ import "react-slideshow-image/dist/styles.css";
 export default function MovieGallery(props) {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  //create state to store all diferent genres (blue)
-  //create state to store selected genre (red)
+  const [genres, setGenres] = useState([]);
+  const [selectedGenres, setselectedGenres] = useState("");
 
   useEffect(() => {
     axios
@@ -17,17 +17,24 @@ export default function MovieGallery(props) {
       .then((response) => {
         setMovies(response.data);
         setLoading(false);
-        //filter and distinct all genres, from all shows
-        //hint  [.. sew Set(array with all the genres)]
-        //the result should be store in (blue)
+
+        let aGenres = [];
+        response.data.forEach((oShow) => {
+          aGenres = aGenres.concat(oShow.genres);
+        });
+        aGenres = [...new Set(aGenres)];
+        setGenres(aGenres);
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
 
+  function changeGenre(event) {
+    setselectedGenres(event.target.value);
+  }
+
   const renderCards = (nNumberShows = 12) => {
-    //use (red) to filter movies array
     return movies.slice(0, nNumberShows).map((movie) => {
       return (
         <div className="movie-card" key={movie.id}>
@@ -36,7 +43,9 @@ export default function MovieGallery(props) {
           </Link>
           <div className="movie-info">
             <h3>{movie.name}</h3>
-            <p>Network: {movie.network ? movie.network.name : "unknown"}</p>
+            <p className="network-label">
+              Network: {movie.network ? movie.network.name : "unknown"}
+            </p>
           </div>
         </div>
       );
@@ -47,12 +56,16 @@ export default function MovieGallery(props) {
     return <h4>loading...</h4>;
   }
   return (
-    <div>
-      {/* on change, set (red) value */}
-      <select>
-        {/*  options are created dynamicaly with (blue) */}
-        <option>Action</option>
-        <option>Drama</option>
+    <div className="movie-gallery">
+      <select
+        value={selectedGenres}
+        onChange={changeGenre}
+        className="select-genres"
+      >
+        <option value="All">All</option>
+        {genres.map((item) => (
+          <option value={item}>{item}</option>
+        ))}
       </select>
       <Slide slidesToShow={4} slidesToScroll={3}>
         {renderCards()}

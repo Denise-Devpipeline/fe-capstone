@@ -23,7 +23,7 @@ h1 {
   @include margins(1em 0em 0 1em);
   padding-top: 2em;
 }
-p {
+.about-paras {
   @include margins(1em 10em 0 10em);
   text-align: justify;
 }
@@ -46,12 +46,18 @@ h2 {
   text-align: center;
 }
 
-.project1 {
-  background-color: #19a7ce;
-  color: #f6f1f1;
-  width: 20%;
-  padding: 4em;
-  box-sizing: border-box;
-  text-align: center;
-  border-radius: 5px;
+#darkbackground {
+  width: 10%;
+  height: 10%;
+  object-fit: contain;
+  // z-index: -1;
 }
+// .project1 {
+//   background-color: #19a7ce;
+//   color: #f6f1f1;
+//   width: 20%;
+//   padding: 4em;
+//   box-sizing: border-box;
+//   text-align: center;
+//   border-radius: 5px;
+// }
