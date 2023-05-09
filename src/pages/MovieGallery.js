@@ -25,8 +25,8 @@ export default function MovieGallery(props) {
         aGenres = [...new Set(aGenres)];
         setGenres(aGenres);
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((e) => {
+        console.log(e);
       });
   }, []);
 
@@ -34,17 +34,23 @@ export default function MovieGallery(props) {
     setselectedGenres(event.target.value);
   }
 
-  const renderCards = (nNumberShows = 12) => {
-    return movies.slice(0, nNumberShows).map((movie) => {
+  const renderCards = (nNumberShows = 12, bFilterGenre = false) => {
+    let aSectionShows = movies.slice(0, nNumberShows);
+
+    if (bFilterGenre) {
+      //filter aSectionShows
+    }
+
+    return aSectionShows.map((show) => {
       return (
-        <div className="movie-card" key={movie.id}>
-          <Link to={`/showspage/${movie.id}`}>
-            <img src={movie.image.medium} alt="Show Cover" />
+        <div className="movie-card" key={show.id}>
+          <Link to={`/showspage/${show.id}`}>
+            <img src={show.image.medium} alt="Show Cover" />
           </Link>
           <div className="movie-info">
-            <h3>{movie.name}</h3>
+            <h3>{show.name}</h3>
             <p className="network-label">
-              Network: {movie.network ? movie.network.name : "unknown"}
+              Network: {show.network ? show.network.name : "unknown"}
             </p>
           </div>
         </div>
@@ -70,10 +76,7 @@ export default function MovieGallery(props) {
       <Slide slidesToShow={4} slidesToScroll={3}>
         {renderCards()}
       </Slide>
-
-      <Slide slidesToShow={4} slidesToScroll={3}>
-        {renderCards(100)}
-      </Slide>
+      <div className="movieGrid">{renderCards(400, true)}</div>
     </div>
   );
 }
